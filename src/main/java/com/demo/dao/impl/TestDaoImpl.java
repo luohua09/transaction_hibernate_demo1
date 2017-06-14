@@ -1,6 +1,7 @@
 package com.demo.dao.impl;
 
 import com.demo.dao.TestDao;
+import com.demo.entity.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -9,17 +10,9 @@ import org.springframework.stereotype.Repository;
  * Created by lorne on 2017/6/8.
  */
 @Repository
-public class TestDaoImpl implements TestDao {
+public class TestDaoImpl extends BaseDaoImpl<Test,String> implements TestDao {
 
 
-    @Autowired
-    private JdbcTemplate jdbcTemplate;
-
-    @Override
-    public void update(String name) {
-        String sql = "update t_test set name = ? where id = 1 ";
-        jdbcTemplate.update(sql,name);
-    }
 
 
 }

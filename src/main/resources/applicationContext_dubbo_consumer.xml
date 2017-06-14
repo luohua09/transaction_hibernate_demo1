@@ -11,7 +11,7 @@
     <dubbo:application name="tx-transaction1"   />
 
     <!--所有参与分布式事务的模块以及TxManager都必须要在同一个服务下-->
-    <dubbo:registry protocol="zookeeper" address="127.0.0.1:2181" />
+    <dubbo:registry protocol="zookeeper" address="192.168.2.108:2181" />
 
     <!--依赖TxManager服务-->
     <dubbo:reference timeout="3000" interface="com.lorne.tx.mq.service.MQTxManagerService" id="managerService" />

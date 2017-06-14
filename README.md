@@ -1,5 +1,5 @@
-# transaction_demo1
-transaction_demo1 事务发起方
+# transaction_hibernate_demo1
+transaction_hibernate_demo1 事务发起方
 
 
 ### 使用步骤
@@ -13,8 +13,8 @@ zookeeper服务
 
 1. 启动[txManager](https://github.com/1991wangliang/txManager)服务.
 2. 创建数据库test，执行test.sql脚本
-3. 配置transaction_demo1和transaction_demo2的db.properties和applicationContext_dubbo_consumer.xml配置
-3. 启动transaction_demo2的[TransactionTest.test()](https://github.com/1991wangliang/transaction_demo2)
+3. 配置transaction_hibernate_demo1和transaction_hibernate_demo2的db.properties和applicationContext_dubbo_consumer.xml配置
+3. 启动transaction_hibernate_demo2的[TransactionTest.test()](https://github.com/1991wangliang/transaction_hibernate_demo2)
 4. 运行该项目的TransactionTest.test()方法。
 
 #### 注意：

@@ -1,9 +1,9 @@
 package com.demo.service.impl;
 
-import com.demo.service.TestService;
-import com.lorne.tx.annotation.TxTransaction;
 import com.demo.dao.TestDao;
+import com.demo.entity.Test;
 import com.demo.service.Test2Service;
+import com.demo.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,10 +24,14 @@ public class TestServiceImpl implements TestService {
     @Override
     public String hello() {
 
-        String name = "hello";
-        testDao.update(name);
+        String name = "hello_demo1";
+        Test test = new Test();
+        test.setName(name);
+        testDao.save(test);
+
 
         String res =  test2Service.test();
+
         return res;
     }
 
