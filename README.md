@@ -21,4 +21,4 @@ zookeeper服务
  由于三个dubbo服务在一个dubbo服务下，需要修改port不能冲突`<dubbo:protocol accesslog="true" name="dubbo" port="20881" />`
 
 #### 效果：
-会出异常，然后数据库数据不被修改。当注释调transaction_demo2的异常代码后，数据库下test表的两条数据会被修改。
+会出异常，然后数据库数据不被修改。当注释调transaction_demo1 TestServiceImpl下的 int v = 100/0;代码后，数据库下t_test表会增加两条数据。
