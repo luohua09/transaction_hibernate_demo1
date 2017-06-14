@@ -95,13 +95,13 @@
     </tx:advice>
 
 
-    <!--<bean id="txTransactionInterceptor" class="com.lorne.tx.interceptor.TxManagerInterceptor"/>-->
+    <bean id="txTransactionInterceptor" class="com.lorne.tx.interceptor.TxManagerInterceptor"/>
 
 
     <aop:config>
         <aop:pointcut id="allManagerMethod" expression="execution(* com.**.service.impl.*Impl.*(..))"/>
         <aop:advisor  order="100" advice-ref="txAdvice" pointcut-ref="allManagerMethod"/>
-        <!--<aop:advisor  order="10" advice-ref="txTransactionInterceptor" pointcut-ref="allManagerMethod"/>-->
+        <aop:advisor  order="10" advice-ref="txTransactionInterceptor" pointcut-ref="allManagerMethod"/>
     </aop:config>
 
 </beans>
